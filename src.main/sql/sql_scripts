@@ -1,0 +1,12 @@
+create database bot;
+
+create table bot_table_main
+(
+    id serial,
+    name varchar(255)
+);
+
+insert into bot_table_main (name)
+values ('first'),
+       ('second'),
+       ('third');
