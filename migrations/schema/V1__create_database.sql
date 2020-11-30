@@ -93,56 +93,56 @@ create table user_periods (
 create table user_excreta (
     user_excreta_id serial not null constraint user_excreta_pk primary key,
     user_day_data_id integer references user_day_data (user_day_data_id),
-    excreta_id integer references excreta (excreta_id)
+    excreta_id smallint[]
 );
 
 
 create table user_intestines (
     user_intestines_id serial not null constraint user_intestines_pk primary key,
     user_day_data_id integer references user_day_data (user_day_data_id),
-    intestines_id integer references intestines (intestines_id)
+    intestines_id smallint[]
 );
 
 
 create table user_bladder (
     user_bladder_id serial not null constraint user_bladder_pk primary key,
     user_day_data_id integer references user_day_data (user_day_data_id),
-    bladder_id integer references bladder (bladder_id)
+    bladder_id smallint[]
 );
 
 
 create table user_indisposition (
     user_indisposition_id serial not null constraint user_indisposition_pk primary key,
     user_day_data_id integer references user_day_data (user_day_data_id),
-    indisposition_id integer references indisposition (indisposition_id)
+    indisposition_id smallint[]
 );
 
 
 create table user_mood (
     user_mood_id serial not null constraint user_mood_pk primary key,
     user_day_data_id integer references user_day_data (user_day_data_id),
-    mood_id integer references mood (mood_id)
+    mood_id smallint[]
 );
 
 
 create table user_sex (
     user_sex_id serial not null constraint user_sex_pk primary key,
     user_day_data_id integer references user_day_data (user_day_data_id),
-    sex_id integer references sex (sex_id)
+    sex_id smallint[]
 );
 
 
 create table user_ration (
     user_ration_id serial not null constraint user_ration_pk primary key,
     user_day_data_id integer references user_day_data (user_day_data_id),
-    ration_id integer references ration (ration_id)
+    ration_id smallint[]
 );
 
 
 create table user_event (
     user_event_id serial not null constraint user_event_pk primary key,
     user_day_data_id integer references user_day_data (user_day_data_id),
-    event_id integer references event (event_id)
+    event_id smallint[]
 );
 -- state tables end
 ----------------------------------------------------------------------------------------------
