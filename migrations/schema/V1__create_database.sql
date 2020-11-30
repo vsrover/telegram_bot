@@ -77,16 +77,16 @@ create table user_day_data (
     user_day_data_id serial not null constraint user_day_data_pk primary key,
     bot_user_id integer references bot_user (bot_user_id),
     date timestamp with time zone not null,
-    sleep integer,
-    weight integer,
-    basal_temperature integer
+    sleep numeric (4,2),
+    weight numeric (5,2),
+    basal_temperature numeric (3,1)
 );
 
 
 create table user_periods (
     user_periods_id serial not null constraint user_periods_pk primary key,
     user_day_data_id integer references user_day_data (user_day_data_id),
-    periods_id integer references periods (periods_id)
+    periods_id smallint[]
 );
 
 
